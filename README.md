@@ -210,7 +210,7 @@ docker run -d --name todo-node-app -p 8000:8000 todo-node-app
 #### Our app is running through Jenkins :-
 ![app](https://github.com/sudhajobs0107/ToDo-Node-App/blob/master/images/app.PNG)
 ___
-#### Now we are doing **CICD manually** by **pressing Build Now button** but if we want this **automate like devloper push code on GitHub and Jenkins pipeline run automatically** then first install "**GitHub Integration" plugins** in jenkins. Now go to **GitHub** => **Repo Settings** => **Webhooks** => **Add webhook** => in payload url "**paste jenkins url and github-webhook/** . Now **go to instance** => **security** => **edit inbound rule** => **in port 8080 change source "Anywhere" so that github will access instance** => **change content type to "application/json"** => click "**Add Webhook**". Our webhook added see in image given below :-
+## Now we are doing **CICD manually** by **pressing Build Now button** but if we want this **automate like devloper push code on GitHub and Jenkins pipeline run automatically** then first install "**GitHub Integration" plugins** in jenkins. Now go to **GitHub** => **Repo Settings** => **Webhooks** => **Add webhook** => in payload url "**paste jenkins url and github-webhook/** . Now **go to instance** => **security** => **edit inbound rule** => **in port 8080 change source "Anywhere" so that github will access instance** => **change content type to "application/json"** => click "**Add Webhook**". Our webhook added see in image given below :-
 ![webhook](https://github.com/sudhajobs0107/ToDo-Node-App/blob/master/images/webhook.PNG)
 ___
 ## Why we add webhook? 
