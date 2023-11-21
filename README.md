@@ -72,9 +72,9 @@ ___
 ```
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 ```
-+ And we will get our password. Copy and paste it to unlock Jenkins and install plugins :-
-![install_plugins](https://github.com/sudhajobs0107/ToDo-Node-App/blob/master/images/install_plugins.PNG)
-## **Jenkins is ready.**
++ And we will get our password. Copy and paste it to unlock Jenkins :-
+![unlock_jenkins](https://github.com/sudhajobs0107/ToDo-Node-App/blob/master/images/unlock_jenkins.PNG)
+#### Now click **Install plugins** 
 ![jenkins-is-ready](https://github.com/sudhajobs0107/ToDo-Node-App/blob/master/images/install_plugins.PNG)
 ## **Welcome to Jenkins**
 ![welcome-to-jenkins](https://github.com/sudhajobs0107/ToDo-Node-App/blob/master/images/welcome-to-jenkins.PNG)
