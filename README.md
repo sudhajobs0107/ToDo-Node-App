@@ -1,43 +1,43 @@
 # ToDo-Node-App Project1 :-)
 ### In this project we will do CICD pipeline on an AWS EC2 instance using Git and Jenkins. We will make a Nodejs App. 
 ### Tool we will need in this project is :-
->+ 1.) Docker 
->+ 2.) Github 
->+ 3.) AWS EC2 
->+ 4.) Jenkins
+>+ ### 1.) Docker 
+>+ ### 2.) Github 
+>+ ### 3.) AWS EC2 
+>+ ### 4.) Jenkins
 ___
 # Prerequisites
 ### Before starting the project you should have these things in your system :-
->+ Account on AWS
->+ Git
->+ Todo App code (we will use code from this repository : [link with todo-list](https://github.com/sudhajobs0107/todo-list.git)
+>+ ### Account on AWS
+>+ ### Git
+>+ ###Todo App code (we will use code from this repository : [link with todo-list](https://github.com/sudhajobs0107/todo-list.git)
 ___
 ## STEP 1: Launch Instance
->+ Create AWS EC2 instance
+>+ ### Create AWS EC2 instance
 ![Instance](https://github.com/sudhajobs0107/ToDo-Node-App/blob/master/images/instance.PNG)
->+ Connect to instance
->+ After successfully connecting to the EC2 instnce, it will look like this
+>+ ### Connect to instance
+>+ ### After successfully connecting to the EC2 instnce, it will look like this
 ![Connect Interface](https://github.com/sudhajobs0107/ToDo-Node-App/blob/master/images/connect%20interface.PNG)
 ___
 ## STEP 2: Install Java
-+ Use command as follow :-
++ ### Use command as follow :-
 ```
 sudo apt update
 ```
 ```
 sudo apt install openjdk-17-jre
 ```
-+ To check java install or not use command :-
++ ### To check java install or not use command :-
 ```
 java -version
 ```
 ___
 ## STEP 3: Install Jenkins
-+ Use command as follow :-
++ ### Use command as follow :-
 ```
 curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee \  /usr/share/keyrings/jenkins-keyring.asc > /dev/null
 ```
-+ Next command :-
++ ### Next command :-
 ```
 echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
   https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
@@ -48,31 +48,31 @@ sudo apt-get update
 ```
 ### This time you will see jenkins in update :-
 ![pkg_jenkins](https://github.com/sudhajobs0107/ToDo-Node-App/blob/master/images/pkg_jenkins.PNG)
-+ **Next command :-**
++ ### Next command :-
 ```
 sudo apt-get install jenkins
 ```
 ___
 
 ## STEP 4: Start Jenkins
-+ Use command as follow :-
++ ### Use command as follow :-
 ```
 sudo systemctl start jenkins.service
 ```
-+ Next command :-
++ ### Next command :-
 ```
 sudo systemctl status jenkins
 ```
-+ image active_running
-+ Now copy **Public IPv4 address:8080** and you will see :- 
-+ image jenkins
+![active_running](https://github.com/sudhajobs0107/ToDo-Node-App/blob/master/images/active_running.PNG)
++ ### Now copy **Public IPv4 address:8080** and you will see :- 
+![jenkins](https://github.com/sudhajobs0107/ToDo-Node-App/blob/master/images/unlock_jenkins.PNG)
 ___
 ## STEP 5: Unlock Jenkins
-+ **Use command as follow :-**
++ ### Use command as follow :-
 ```
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 ```
-+ And we will get our password. Copy and paste it to unlock Jenkins :-
++ ### And we will get our password. Copy and paste it to unlock Jenkins :-
 ![unlock_jenkins](https://github.com/sudhajobs0107/ToDo-Node-App/blob/master/images/unlock_jenkins.PNG)
 ### Now click **Install plugins** 
 ![jenkins-is-ready](https://github.com/sudhajobs0107/ToDo-Node-App/blob/master/images/install_plugins.PNG)
