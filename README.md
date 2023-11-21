@@ -1,6 +1,6 @@
 # ToDo-Node-App Project1 :-)
-### In this project we will do CICD pipeline on an AWS EC2 instance using Git and Jenkins. We will make a Nodejs App. 
-### Tool we will need in this project is :-
++ ### In this project we will do CICD pipeline on an AWS EC2 instance using Git and Jenkins. We will make a Nodejs App. 
++ ### Tool we will need in this project is :-
 >+ ### 1.) Docker 
 >+ ### 2.) Github 
 >+ ### 3.) AWS EC2 
