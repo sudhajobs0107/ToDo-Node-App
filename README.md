@@ -10,13 +10,13 @@ ___
 ### Before starting the project you should have these things in your system :-
 >+ ### Account on AWS
 >+ ### Git
->+ ###Todo App code (we will use code from this repository : [link with todo-list](https://github.com/sudhajobs0107/todo-list.git)
+>+ ### Todo App code (we will use code from this repository : [link with todo-list](https://github.com/sudhajobs0107/todo-list.git)
 ___
 ## STEP 1: Launch Instance
->+ ### Create AWS EC2 instance
++ ### Create AWS EC2 instance
 ![Instance](https://github.com/sudhajobs0107/ToDo-Node-App/blob/master/images/instance.PNG)
->+ ### Connect to instance
->+ ### After successfully connecting to the EC2 instnce, it will look like this
++ ### Connect to instance
++ ### After successfully connecting to the EC2 instnce, it will look like this
 ![Connect Interface](https://github.com/sudhajobs0107/ToDo-Node-App/blob/master/images/connect%20interface.PNG)
 ___
 ## STEP 2: Install Java
