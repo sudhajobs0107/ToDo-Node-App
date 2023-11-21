@@ -1,22 +1,22 @@
-# ToDo-Node-App Project1 8-)
+# ToDo-Node-App Project1 :-)
 #### In this project we will do CICD pipeline on an AWS EC2 instance using Git and Jenkins. We will make a Nodejs App. 
 #### Tool we will need in this project is :-
-+ 1.) Docker 
-+ 2.) Github 
-+ 3.) AWS EC2 
-+ 4.) Jenkins
+>+ 1.) Docker 
+>+ 2.) Github 
+>+ 3.) AWS EC2 
+>+ 4.) Jenkins
 ___
 # Prerequisites
 #### Before starting the project you should have these things in your system :-
-+ Account on AWS
-+ Git
-+ Todo App code (we will use code from this repository : [link with todo-list](https://github.com/sudhajobs0107/todo-list.git)
+>+ Account on AWS
+>+ Git
+>+ Todo App code (we will use code from this repository : [link with todo-list](https://github.com/sudhajobs0107/todo-list.git)
 ___
 ## STEP 1: Launch Instance
-+ Create AWS EC2 instance
+>+ Create AWS EC2 instance
 ![Instance](https://github.com/sudhajobs0107/ToDo-Node-App/blob/master/images/instance.PNG)
-+ Connect to instance
-+ After successfully connecting to the EC2 instnce, it will look like this
+>+ Connect to instance
+>+ After successfully connecting to the EC2 instnce, it will look like this
 ![Connect Interface](https://github.com/sudhajobs0107/ToDo-Node-App/blob/master/images/connect%20interface.PNG)
 ___
 ## STEP 2: Install Java
@@ -81,7 +81,7 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
 #### Now click on **Create a job** => give name "**todo-node-app**" => select "**Freestyle project**" => click **OK**.
 ![create-a-job](https://github.com/sudhajobs0107/ToDo-Node-App/blob/master/images/create-a-job.PNG)
-
+___
 #### Now add "**Description**" => selct "**GitHub project**" and **project url**  => Source Code Management "**Git**" and add "**Repository URL**" 
 #### Now we have to connect **GitHub** to **server through SSH**, we will create **ssh-keygen** . So for this we go to **EC2 instance** and write command :-
 ```
@@ -90,7 +90,7 @@ ssh-keygen
 
 #### And our private key pair will build and it will look like this :-
 ![keygen](https://github.com/sudhajobs0107/ToDo-Node-App/blob/master/images/keygen.PNG)
-
+___
 ## Now write command :-
 ```
 cd .ssh
@@ -114,7 +114,7 @@ cat id_rsa.pub
 ```
 ## It will show our public key, see in photo :-
 ![public-key](https://github.com/sudhajobs0107/ToDo-Node-App/blob/master/images/public-key.PNG)
-
+___
 #### How to connect Git to EC2 instance?
 #### Go to **GitHub** => go to **settings** => **SSH keys** => **new SSH key** => write "**Title**" => in key section **paste the public key** that we generated in **EC2 instance** => click "**add SSH key**". Here what we did, **we give public key to GitHub**. Now **Github have access to connect our instance**.
 
@@ -140,7 +140,7 @@ sudo npm install
 node app.js
 ```
 ![running](https://github.com/sudhajobs0107/ToDo-Node-App/blob/master/images/running.PNG)
-
+___
 #### To run our app we have **open port no. 8000**. So for this "**select instance**" => **go to security** => **edit inbound rules** => Add Type "**custom TCP**", Port range "**8000**", Source "**Anywhere**" => **Save rules**.
 
 #### Now copy "**Public IP address:8000**" and paste in another tab and **our app start working**, see in image :-
@@ -175,7 +175,7 @@ docker build . -t todo-node-app
 #### Now docker container build see in image given below :-
 ![container](https://github.com/sudhajobs0107/ToDo-Node-App/blob/master/images/container.PNG) 
 ![container2](https://github.com/sudhajobs0107/ToDo-Node-App/blob/master/images/container2.PNG)
-
+___
 #### Now we **run "Docker Container"** so for this use command :-
 ```
 docker run -d --name todo-node-app -p 8000:8000 todo-node-app
@@ -192,7 +192,7 @@ docker ps
 
 #### We run our app though docker see in given image below :-
 ![dockerrun](https://github.com/sudhajobs0107/ToDo-Node-App/blob/master/images/dockerrun.PNG)
-
+___
 #### We did all things through docker manually , now we will do these things automate through **jenkins CICD pipeline**. First kill the running container so for this use command :-
  ```
 docker kill (conatainer id)
@@ -209,10 +209,10 @@ docker run -d --name todo-node-app -p 8000:8000 todo-node-app
 
 #### Our app is running through Jenkins :-
 ![app](https://github.com/sudhajobs0107/ToDo-Node-App/blob/master/images/app.PNG)
-
+___
 #### Now we are doing **CICD manually** by **pressing Build Now button** but if we want this **automate like devloper push code on GitHub and Jenkins pipeline run automatically** then first install "**GitHub Integration" plugins** in jenkins. Now go to **GitHub** => **Repo Settings** => **Webhooks** => **Add webhook** => in payload url "**paste jenkins url and github-webhook/** . Now **go to instance** => **security** => **edit inbound rule** => **in port 8080 change source "Anywhere" so that github will access instance** => **change content type to "application/json"** => click "**Add Webhook**". Our webhook added see in image given below :-
 ![webhook](https://github.com/sudhajobs0107/ToDo-Node-App/blob/master/images/webhook.PNG)
-
+___
 ## Why we add webhook? 
 ## We add webhook **because we have to connect GitHub to Jenkins so if anything happened in GitHub then it triggers and Jenkins pipeline will start automatically**.
 ### [Emojies](https://github.com/markdown-it/markdown-it-emoji)
@@ -221,3 +221,4 @@ docker run -d --name todo-node-app -p 8000:8000 todo-node-app
 
 
 # Our ToDo-Node-App project is completed :-).
+___
