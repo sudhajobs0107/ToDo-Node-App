@@ -162,9 +162,9 @@ RUN npm install
 EXPOSE 8000
 CMD ["node","app.js"]
 ```
-### Now we have to build "**Docker Container**" from "**Dockerfile**", for this we use command as shown below :-
+### Now we have to build "**Docker Image**" from "**Dockerfile**", for this we use command as shown below :-
 ```
-sudo usermod -a -G docker $USER
+sudo usermod -aG docker $USER
 ```
 ```
 sudo reboot
@@ -172,16 +172,16 @@ sudo reboot
 ```
 docker build . -t todo-node-app
 ```
-### Now docker container build see in image given below :-
+### Now docker image build see in image given below :-
 ![container](https://github.com/sudhajobs0107/ToDo-Node-App/blob/master/images/container.PNG) 
 ![container2](https://github.com/sudhajobs0107/ToDo-Node-App/blob/master/images/container2.PNG)
 ___
-### Now we **run "Docker Container"** so for this use command :-
+### Now we will **run "Docker Container"** from Docker image so for this use command :-
 ```
 docker run -d --name todo-node-app -p 8000:8000 todo-node-app
 ```
 
-### Our **container start running** see in image given below :-
+### Our **container start ** see in image given below :-
 ![running2](https://github.com/sudhajobs0107/ToDo-Node-App/blob/master/images/running2.PNG)
 
 ### If you want to see **docker status** use command :-
