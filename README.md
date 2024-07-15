@@ -106,8 +106,6 @@ ls
 cat id_rsa
 ```
 
-## It will show our private key, see in photo :-
-+image private-key
 ## Now write command :-
 ```
 cat id_rsa.pub
